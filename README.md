@@ -1,4 +1,4 @@
-Web Server Log Analysis
+#Web Server Log Analysis
 Overview
 This project is designed to process web server logs and extract valuable insights for analysis. The script focuses on counting requests per IP address, identifying the most accessed endpoints, detecting suspicious activities (like failed login attempts), and saving the results for further examination.
 
