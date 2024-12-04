@@ -1,46 +1,49 @@
 Log Analysis Project
 Overview
+This project processes web server logs to extract valuable insights for analysis. The script counts requests per IP address, identifies the most accessed endpoints, detects suspicious activities such as failed login attempts, and saves the results for further examination.
 
-This project is designed to process web server logs and extract valuable insights for analysis. The script focuses on counting requests per IP address, identifying the most accessed endpoints, detecting suspicious activities (like failed login attempts), and saving the results for further examination.
-
-By utilizing Python's file handling, regular expressions, and data analysis techniques, this project provides a way to monitor server activity and identify potential security risks.
+By utilizing Python's file handling, regular expressions, and data analysis techniques, this project provides an effective way to monitor server activity and identify potential security risks.
 
 Key Features
-1. Requests Per IP Address
+Requests Per IP Address:
+
 The script counts the number of requests made by each IP address.
-Results are displayed in descending order of frequency.
-2. Most Accessed Endpoint
-The most frequently visited endpoint (e.g., /home, /login) is identified.
-The script outputs the endpoint name and the number of times it was accessed.
-3. Suspicious Activity Detection
-The script tracks failed login attempts (status code 401) to detect possible brute-force attacks.
-It flags IP addresses that exceed a configurable threshold (default: 10 failed attempts).
-4. CSV Export
-All results are saved in a CSV file for further analysis or reporting.
+Displays results in descending order of frequency.
+Most Accessed Endpoint:
+
+Identifies the most frequently visited endpoint (e.g., /home, /login).
+Outputs the endpoint name and the number of times it was accessed.
+Suspicious Activity Detection:
+
+Tracks failed login attempts (HTTP status code 401) to detect potential brute-force attacks.
+Flags IP addresses that exceed a configurable threshold (default: 10 failed attempts).
+CSV Export:
+
+Saves all analysis results into a CSV file for further review or reporting.
 How to Run the Project
 Follow these steps to run the project on your local machine:
 
 1. Set Up Your Environment
-Make sure Python is installed on your system. You can check the installed version using:
+Ensure Python is installed on your system. You can verify the installation by running:
 
 bash
 Copy code
 python --version
-If needed, install Python from here.
+If Python is not installed, download and install it from here.
 
 2. Clone the Repository
-Clone the repository to your local machine using:
+Clone the repository to your local machine:
 
 bash
 Copy code
 git clone https://github.com/jayvardhan12/VRV_Security.git
-Then, navigate into the project folder:
+Navigate into the project folder:
 
 bash
 Copy code
-cd log-analysis
+cd VRV_Security/log-analysis
 3. Prepare the Log File
-Ensure the log file (e.g., sample.log) is placed in the project directory. This log file should be in the Common Log Format (CLF) or a similar format.
+Make sure the log file (e.g., sample.log) is placed in the project directory. The log file should be in a Common Log Format (CLF) or a similar format.
 
 4. Run the Script
 Execute the Python script by running:
@@ -92,6 +95,11 @@ Failed login threshold: You can adjust the threshold for suspicious activity det
 Log file format: The script is designed to work with logs in a standard format. If your logs differ, you may need to update the regular expression pattern in the extract_log_details function.
 Dependencies
 Python 3.x
-No external libraries required, uses Python's built-in libraries: re, csv, collections.
+No external libraries are required; the script uses Python's built-in libraries:
+
+re (for regular expressions)
+csv (for reading/writing CSV files)
+collections (for counting IP addresses and endpoints)
 License
 This project is open-source and available under the MIT License.
+
