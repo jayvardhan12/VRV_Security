@@ -1,5 +1,6 @@
-#Web Server Log Analysis
+Log Analysis Project
 Overview
+
 This project is designed to process web server logs and extract valuable insights for analysis. The script focuses on counting requests per IP address, identifying the most accessed endpoints, detecting suspicious activities (like failed login attempts), and saving the results for further examination.
 
 By utilizing Python's file handling, regular expressions, and data analysis techniques, this project provides a way to monitor server activity and identify potential security risks.
